@@ -101,3 +101,14 @@ publikaceImgContent.forEach((container) => {
     }
   });
 });
+
+const testElement = document.querySelector(".test");
+
+const fetchTest = async () => {
+  const result = await fetch("./functions/test.js");
+  result.text().then((data) => {
+    console.log(data);
+  });
+};
+
+fetchTest();
